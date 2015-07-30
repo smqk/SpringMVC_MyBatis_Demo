@@ -1,0 +1,23 @@
+body > div{
+	position:relative;
+}
+
+/*  页头  */
+#header_wrap{
+}
+
+#middle_wrap{
+}
+
+#middle_wrap #content{
+	float: right;
+	width:730px;
+}
+
+
+/*  页尾  */
+#footer_wrap{
+	clear: both;
+	margin-top: 20px;
+}
+

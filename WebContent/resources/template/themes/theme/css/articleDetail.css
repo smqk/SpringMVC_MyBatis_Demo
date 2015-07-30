@@ -1,0 +1,37 @@
+#news_detail{
+	width: 100%;
+	min-height: 450px;
+	padding-botton:8px;
+	background: #fff;
+	border: 1px solid #ccc;
+	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+		
+}
+
+#news_detail > h2{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 4px 10px 4px 28px;
+	margin: 0px;
+	color: #C00;
+	background: url("../images/title_bg.png") no-repeat scroll 0px 0px transparent;
+	border-bottom: 1px solid #CCC;
+	font-family: "微软雅黑","黑体";
+	letter-spacing: 1px;
+}
+
+#news_detail > div{
+	width: 90%;
+}
+
+#news_detail > div h3{
+	font-size: 18px;
+	font-weight: bold;
+	line-height:30px;
+	text-align:center;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 15px;
+}

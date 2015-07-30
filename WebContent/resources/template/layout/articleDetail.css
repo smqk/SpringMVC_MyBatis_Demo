@@ -1,0 +1,14 @@
+body > div{
+	position:relative;
+}
+
+#content{
+	float: right;
+	width:730px;
+}
+
+/*  页尾  */
+#footer_wrap{
+	margin-top: 20px;
+}
+

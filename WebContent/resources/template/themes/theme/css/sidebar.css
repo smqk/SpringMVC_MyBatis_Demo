@@ -1,0 +1,65 @@
+
+/*============================  侧边栏[#sidebar] 开始 =======================================*/
+#sidebar{
+	width:215px;
+	float:left;
+	overflow: hidden;
+}
+
+#sidebar .content > li{
+	float:left;
+	overflow:hidden;
+	margin-bottom:15px;
+	background: #fff;
+	border: 2px solid #ddd;
+
+	-moz-border-radius:6px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+}
+
+#sidebar .content > li h2{
+	padding: 5px 5px 5px 30px;
+	width:177px;
+
+	overflow:hidden;
+	background: #CC0000 url(../images/title.png) no-repeat 0 0;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	font-size:16px;
+	color: #fff;
+	font-family:  "微软雅黑", "黑体"; 
+	letter-spacing: 1px;
+}
+
+#sidebar .content > li li{
+	margin: 3px 5px 3px 5px;
+	padding: 3px 0 3px 20px;
+	background: url(../images/list.png) no-repeat 11px 5px;
+	border: none;
+	width:180px;
+	overflow:hidden;
+
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+#sidebar .content > li li a:link, #sidebar .content > li li a:visited {
+	display:block;
+	margin: 0;
+	padding-left: 5px;
+	overflow:hidden;
+	text-decoration: none;
+	color: #333;
+}
+
+#sidebar .content > li li a:hover {
+	color: #CC0000;
+}
+
+#sidebar .content > li li:hover{
+	background: url(../images/list.png) no-repeat 11px -27px;
+}
+/*============================  侧边栏[#sidebar] 结束 =======================================*/
+

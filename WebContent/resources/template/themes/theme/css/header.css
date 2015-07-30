@@ -1,0 +1,160 @@
+/*============================  Header start =======================================*/
+.header-container{
+	width:960px;
+	height:80px;
+	background:url("../images/header_bg.gif");
+}
+.header_left{
+	width:760px;
+	height:80px;
+	padding-top:10px;
+	float:left;	
+}
+
+.header_left .logo{
+	display:block;
+	background:url("/resources/common/images/logo.gif") no-repeat;
+	width: 250px;
+	height: 80px;
+	float: left;
+}
+
+.header_left .banner{
+	display:block;
+	background:url("../images/header_banner.png") no-repeat;
+	width: 480px;
+	height: 80px;
+	float: left;
+}
+
+.header_right{	
+	width:200px;
+	height:80px;	
+	padding-top:10px;
+	float:right;
+}
+
+.header_right ul{
+	float:right;
+	width:190px;
+	height:55px;
+	float: left;
+}
+
+.header_right ul li{	
+	width:65px;
+	height:20px;
+	padding:2px 0px  2px 20px;	/* 上 右 下 左 */
+	margin:4px;
+	float:left;
+	border:1px solid #EED;
+}
+
+.r1{
+
+	background:url("../images/toprlink_bg.gif") no-repeat;
+}
+.r2{
+	background:url("../images/toprlink_bg.gif") no-repeat 0px -22px;
+}
+.r3{
+	background:url("../images/toprlink_bg.gif") no-repeat 0px -42px;
+}
+.r4{
+	background:url("../images/toprlink_bg.gif") no-repeat 0px -62px;
+}
+
+/*============================  Header end =======================================*/
+
+
+
+
+/*============================  Navigation start =======================================*/
+/*导航菜单容器*/
+#nav_container{
+	margin: 5px 0 5px 0;
+	width: 960px;
+	height: 45px;
+	position: relative;
+	z-index: 10;
+}
+
+/* ul元素组成的导航栏 */
+.menu_bar{
+	width:960px;
+	height:45px;
+	position:absolute;
+	background:#AF0000;
+	
+	-moz-border-radius:5px;	/* Old Firefox */
+	border-radius:5px;	/*圆角边框*/
+	-webkit-border-radius:5px;
+}
+
+/* 设置菜单栏中字体的颜色 */
+.menu_bar a{
+	color:white;
+}
+
+
+/* 一级菜单项 */
+.menu-item{
+	float:left;
+	margin:10px 10px 15px;	/* 上  左右  下*/
+	padding:5px 10px;		/* 上下  左右*/	
+	position: relative;
+	display:inline;
+	font-size:18px;
+	font-weight:bold;
+
+	-moz-border-radius:5px;
+	border-radius:5px;	/*圆角边框*/
+	-webkit-border-radius:5px;
+}
+
+/*  ======== 鼠标悬停在一级菜单栏时 ======= */
+.menu-item:hover{	
+	background:#c0c0c0;		/* 设置一级菜单其背景 */
+}
+.menu-item:hover .sub-menu{
+	visibility:visible;		/* 设置二级菜单显示 */
+}
+.menu-item:hover a{
+	color:#000000;			/* 设置该组菜单字体颜色为黑色 */
+}
+
+/*  二级菜单 */
+.sub-menu{
+	position:absolute;
+	width:160px;
+	padding:5px 0px;
+	margin-left:-10px;
+	background:#c0c0c0;
+	visibility:hidden;
+	font-size:16px;
+	font-weight:normal;
+
+	-moz-border-radius:5px;
+	border-radius:5px;	/*圆角边框*/
+	-webkit-border-radius:5px;	
+}
+
+/*  二级菜单项 */
+.sub-menu li{
+	padding:5px 10px;
+	margin:5px 5px;
+
+	-moz-border-radius:5px;
+	border-radius:5px;	/*圆角边框*/
+	-webkit-border-radius:5px;
+}
+
+/* =======  鼠标悬停在二级菜单项时  ========== */
+.sub-menu li:hover{	
+	background:#AF0000;	/* 设置<li>背景 */
+}
+.sub-menu li:hover a{
+	color:white;		/*  设置其二级菜单文字颜色 */
+}
+
+/*============================  Navigation end =======================================*/

@@ -1,0 +1,49 @@
+一、shift+alt+j  java类注释
+注释格式：
+/**
+ * 类文件名 
+ * @author 编程改变世界
+ * @time 2014-11-23 下午3:35:35
+ */
+ 
+ 
+ The type org.springframework.dao.support.DaoSupport cannot be resolved. It is indirectly referenced from required .class files
+ 
+ 二、乱码问题：
+ 
+
+
+
+三、启动时抛异常
+严重: StandardWrapper.Throwable
+java.lang.NoClassDefFoundError: org/aopalliance/aop/Advice
+
+解决：（缺少） aopalliance-1.0.jar
+
+四、
+spring-serlvet.xml中缺少一下配置文件
+<!-- 开启注解 -->
+<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+ 2014-12-7 16:08:56 org.springframework.web.servlet.DispatcherServlet noHandlerFound
+ 
+ 
+
+ 
+ 
+ 三种类型的Servlet:
+ 	1、普通Servlet
+ 	2、过滤Servlet(Filter)
+ 	3、监听Servlet(Listener)
+在web.xml中的配置顺序： 监听Servlet(Listener) -> 过滤Servlet(Filter) -> 普通Servlet
+执行顺序：  监听Servlet(Listener) -> 过滤Servlet(Filter) -> 普通Servlet
+
+
+jstl 配置需要两个 JAR 文件， jstl.jar 和 standard.jar 。
+
+http://wiki.fasterxml.com/JacksonDownload
+jackson应该是目前最好的json解析工具。
+API: http://jackson.codehaus.org/1.8.8/javadoc/index.html
+ 
+ 

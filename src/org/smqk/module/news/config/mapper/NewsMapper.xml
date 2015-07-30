@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.smqk.module.news.dao.INewsDao">
+	<resultMap type="org.smqk.module.news.domain.News" id="BaseNews">
+		<id property="newsId" column="newsId" jdbcType="VARCHAR" />
+		<result property="title" column="title" jdbcType="VARCHAR" />
+		<result property="typeId" column="typeId" jdbcType="VARCHAR" />
+		<result property="icon" column="icon" jdbcType="VARCHAR" />
+		<result property="content" column="content" jdbcType="VARCHAR" />
+		<result property="publishDate" column="publishDate" jdbcType="VARCHAR" />
+		<result property="publishTime" column="publishTime" jdbcType="VARCHAR" />
+		<result property="orderValue" column="orderValue" jdbcType="INTEGER" />
+	</resultMap>
+	
+	<select id="getNews" parameterType="String" resultMap="BaseNews">
+		SELECT *
+		FROM td_news
+		WHERE newsId=#{newsId}
+	</select>
+
+
+	<!-- 根据新闻分类查询新闻，然后根据新闻的发布时间来排序 -->
+	<select id="findNewsOrderByTime" parameterType="Map" resultMap="BaseNews">
+		SELECT *
+		FROM td_news
+		<where>
+			<if test="null != newsTypeId and '' != newsTypeId">
+				typeId=#{newsTypeId,jdbcType=VARCHAR}
+			</if>
+		</where>
+		<choose>
+			<when test="orderType == DESC">
+				ORDER BY publishDate DESC,publishTime DESC
+			</when>
+			<otherwise>
+				ORDER BY publishDate ASC,publishTime ASC
+			</otherwise>
+		</choose>
+	</select>
+	
+</mapper>

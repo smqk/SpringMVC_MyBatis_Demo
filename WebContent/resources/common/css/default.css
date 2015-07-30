@@ -1,0 +1,42 @@
+/*======= RESET =========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, p {
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	word-wrap:break-word;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	color:red;
+}
+
+body{
+	border: 0;
+	width:960px;
+	font-size:14px;
+	background: url(/resources/template/themes/theme/images/main_bg.gif);
+}
+ul,li{
+	list-style-type:none;
+}
+
+.clear{
+	clear:both;
+}

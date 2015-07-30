@@ -1,0 +1,61 @@
+/*============================  页脚[.footer] 开始=======================================*/
+#footer {
+	overflow:hidden;
+	width: 960px;
+	margin: 0 auto;
+	padding:8px 0px;
+	background: #cc0000 url(../images/foot_bg.png) repeat 0px 0px;
+	font-size:12px;
+	color: #ccc;
+
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+#footer_navi {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 95%;
+	font-size:12px;
+	color: #ccc;
+}
+#footer_navi ul{
+	float:left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#footer_navi ul li{
+    float: left;
+	height:14px;
+	vertical-align:super;
+	margin: 0 8px 0 0;
+	padding: 0 10px 0 0;
+	position: relative;
+    display: inline;
+	border-right: 1px solid #999;
+
+}
+#footer_navi ul li a:link, #footer_navi ul li a:visited { 
+	text-decoration:none; 
+	cursor:pointer;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: "微软雅黑","黑体" ;
+	line-height: 100%;
+	color:#ccc;
+}
+#footer_navi ul li a:hover {
+	color: #fff; 
+	text-decoration: underline;
+}
+
+.copyright {
+	float:left;
+	margin-top:10px;
+	width: 100%;
+}
+/*============================  页脚[.footer] 结束=======================================*/

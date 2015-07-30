@@ -1,0 +1,23 @@
+body > div{
+	position:relative;
+}
+
+/*  页头  */
+#header_wrap{
+}
+
+#content{
+	float: right;
+	width:730px;
+}
+
+
+/*  新闻分类列表   */
+#newTypeList_wrap{
+}
+
+/*  页尾  */
+#footer_wrap{
+	margin-top: 20px;
+}
+

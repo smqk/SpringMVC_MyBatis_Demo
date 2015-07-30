@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.smqk.module.product.dao.IProductTypeDao">
+	<resultMap type="org.smqk.module.product.domain.ProductType" id="BaseProductType">
+		<id property="typeId" column="typeId" jdbcType="VARCHAR" />
+		<result property="tName" column="tName" jdbcType="VARCHAR" />
+		<result property="descript" column="descript" jdbcType="VARCHAR" />
+		<result property="orderValue" column="orderValue" jdbcType="INTEGER" />
+	</resultMap>
+	
+
+	<!-- 查询出产品分类信息  -->
+	<select id="findProductType" resultMap="BaseProductType">
+		SELECT * 
+		FROM td_product_type 
+		ORDER BY orderValue DESC
+	</select>
+</mapper>

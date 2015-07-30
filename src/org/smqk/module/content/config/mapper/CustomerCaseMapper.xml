@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.smqk.module.content.dao.ICustomerCaseDao">
+	<resultMap type="org.smqk.module.content.domain.CustomerCase" id="BaseCustomerCase">
+		<id property="id" column="id" jdbcType="VARCHAR"/>
+		<result property="title" column="title" jdbcType="VARCHAR" />
+		<result property="icon" column="icon" jdbcType="VARCHAR" />
+		<result property="descript" column="descript" jdbcType="VARCHAR" />
+		<result property="detail" column="detail" jdbcType="VARCHAR" />
+		<result property="date" column="date" jdbcType="VARCHAR"/>
+		<result property="time" column="time" jdbcType="VARCHAR"/>
+		<result property="orderValue" column="orderValue" jdbcType="INTEGER"/>
+	</resultMap>
+	
+
+	<!-- 查询客户案例信息 -->
+	<select id="findCustomerCase" resultMap="BaseCustomerCase" >
+		SELECT * 
+		FROM td_customer_case
+		ORDER BY orderValue DESC
+	</select>
+</mapper>

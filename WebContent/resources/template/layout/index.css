@@ -1,0 +1,364 @@
+
+/*============= 图片幻灯片 ===================*/
+#slide { 
+	padding:0;
+	margin: 10px auto; 
+	margin: 10px auto 10px auto !important;
+	width:960px; 
+	height: 230px;
+
+}
+#slider {
+	float:left;
+	overflow:hidden;
+	height: 233px;
+	width: 735px;
+	margin: 0;	
+}
+#slider img {
+	height: 233px;
+	width: 735px;
+	border: 0;
+}
+#rpic {
+	float:right;
+	overflow:hidden;
+	height: 234px;
+	width: 217px;
+	margin: 0 auto;	
+	padding:0;
+}
+#rpic img {
+	border:1px solid #ccc;
+	height: 74px;
+	width: 215px;	
+}
+#rpic img:hover {
+	filter:alpha(opacity=70);       /* IE */
+	-moz-opacity:0.7;              /* Moz + FF */
+	opacity:0.7;                    /* 支持CSS3的浏览器（FF 1.5也支持）*/
+}
+/*============================  图片幻灯片 =======================================*/
+
+
+
+/*============================  左侧边栏[.sidebar_left] 开始 =======================================*/
+.sidebar_left{
+	width:215px;
+	float:left;
+	overflow: hidden;
+}
+
+.sidebar_left .content > li{
+	float:left;
+	overflow:hidden;
+	margin-bottom:15px;
+	background: #fff;
+	border: 2px solid #ddd;
+
+	-moz-border-radius:6px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+}
+
+.sidebar_left .content > li h2{
+	padding: 5px 5px 5px 30px;
+	width:177px;
+
+	overflow:hidden;
+	background: #CC0000 url(../themes/theme/images/title.png) no-repeat 0 0;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	font-size:16px;
+	color: #fff;
+	font-family:  "微软雅黑", "黑体"; 
+	letter-spacing: 1px;
+}
+
+.sidebar_left .content > li li{
+	margin: 3px 5px 3px 5px;
+	padding: 3px 0 3px 20px;
+	background: url(../themes/theme/images/list.png) no-repeat 11px 5px;
+	border: none;
+	width:180px;
+	overflow:hidden;
+
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.sidebar_left .content > li li a:link, .sidebar_left .content > li li a:visited {
+	display:block;
+	margin: 0;
+	padding-left: 5px;
+	overflow:hidden;
+	text-decoration: none;
+	color: #333;
+}
+
+.sidebar_left .content > li li a:hover {
+	color: #CC0000;
+}
+
+.sidebar_left .content > li li:hover,.sidebar_left .content > li li:hover {
+	background: #EEE url(../themes/theme/images/list.png) no-repeat 11px -27px;
+}
+/*============================  左侧边栏[.sidebar_left] 结束 =======================================*/
+
+
+
+/*============================  客户案例[.customer_case] 开始 =======================================*/
+.customer_case{
+	float:left;
+	width:510px;
+	margin-left:10px;
+	overflow:hidden;
+	background: #fff;
+	border: 1px solid #ccc;
+
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;	
+}
+
+.customer_case h2{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 4px 10px 4px 28px;
+	margin: 0;
+	color: #CC0000;
+	background: url(../themes/theme/images/title_bg.png) no-repeat 0 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.customer_case h2 span {
+	position: relative;
+	float:right;
+
+	font-size: 12px;
+	padding: 5px 0;
+	font-weight:normal;
+}
+
+
+.case{
+	float: left;
+	overflow: hidden;
+	width: 230px;
+	height: 110px;
+	margin: 5px 2px 0px 15px;
+	padding-bottom:0px;
+}
+
+.case img{
+	float:left;
+	margin: 0 10px 5px 0;
+	padding: 1px;
+	width: 95px;
+	height: 80px;
+	border: 1px solid #DEDEDE;
+}
+
+.case img:hover {
+	border: 1px solid #CC0000;
+}
+.case h3 {
+	font-size: 12px;
+ 	font-weight:bold;
+ 	line-height:120%;
+	text-align: left;
+	margin-bottom: 3px;
+}
+.case h3 a:link, .case h3 a:visited{
+    color: #333;
+	text-decoration: none;
+}
+
+.case h3 a:hover {
+    color: #CC0000;
+	text-decoration: underline;
+}
+
+.case p a{
+	float: right;
+}
+/*============================  客户案例[.customer_case] 结束=======================================*/
+
+
+
+/*============================  最新新闻[.news] 开始=======================================*/
+.news-content{
+	width:214px;
+	float: right;
+	background-color:white; 
+	border: 1px solid #ccc;
+	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.news-content h2 {
+	font-size: 16px;
+	font-weight:bold;
+	padding:4px 10px 4px 28px;
+	margin:0;
+	color: #CC0000;
+	background: url(../themes/theme/images/title_bg.png) no-repeat 0 0;
+	border-bottom: 1px solid  #ccc;
+	font-family:  "微软雅黑", "黑体"; 
+	letter-spacing: 1px;
+}
+
+.news-content h2 span {
+	position: relative;
+	float:right;
+	*margin:-28px 5px 0 0;
+	font-size: 12px;
+	padding: 5px 0;
+	font-weight:normal;
+}
+ul.news {
+	margin: 5px 0 0px 0;
+	padding: 0;
+	font-size: 12px;
+}
+ul.news li {
+	float: left;
+	overflow: hidden;
+	width: 190px;
+	height: 14px;
+	margin: 3px 5px 5px 5px;
+	padding: 0 0 0 10px;
+ 	background: #fff url(../themes/theme/images/sm-arrow.gif) no-repeat 2px 5px;
+}
+ul.news li a:link, .mod ul li a:visited{
+	color:#555;
+}
+ul.news li a:hover{
+	color:#cc0000;
+}
+/*============================  最新新闻[.news] 结束=======================================*/
+
+
+
+
+
+/*============================  产品展示、三维激光扫描仪应用行业[.mod] 开始=======================================*/
+.mod {
+	float:left;
+	overflow:hidden;
+	width:733px;
+	margin-left:10px;
+	margin-top:10px;
+	padding: 0 0 10px 0;
+	background: #fff;
+	border: 1px solid #ccc;
+
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-border-radius:5px;	
+}
+.mod h2 {
+	font-size: 16px;
+	font-weight:bold;
+	padding:4px 10px 4px 28px;
+	margin:0;
+	color: #CC0000;
+	background: url(../themes/theme/images/title_bg.png) no-repeat 0 0;
+	border-bottom: 1px solid  #ccc;
+	font-family:  "微软雅黑", "黑体"; 
+	letter-spacing: 1px;
+}
+.mod h2 span {
+	position: relative;
+	float:right;
+	*margin:-28px 5px 0 0;
+	font-size: 12px;
+	padding: 5px 0;
+	font-weight:normal;
+}
+
+
+.sub_mod {
+	float: left;
+	width: 162px;
+	height: 150px;
+	margin: 15px 2px 0px 15px;
+	padding-bottom:0px;
+}
+.sub_mod img {
+	float:left;
+	margin: 0 0 5px 0;
+	padding: 1px;
+	width: 160px;
+	height: 120px;
+	border: 1px solid #DEDEDE;
+}
+.sub_mod img:hover {
+	border: 1px solid #CC0000;
+}
+.sub_mod h3 {
+	font-size: 12px;
+	font-weight:bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.sub_mod h3 a:link, .sub_mod h3 a:visited{
+    color: #333;
+	text-decoration: none;
+}
+.sub_mod h3 a:hover {
+    color: #CC0000;
+	text-decoration: underline;
+}
+
+/*============================   产品展示、三维激光扫描仪应用行业[.product_show] 结束=======================================*/
+
+
+
+
+/*============================  友情链接[.friend_link] 开始=======================================*/
+#friend_link {
+	float:left;
+	width: 100%; 
+	height:auto; 
+	padding:0 0 10px 0;
+	margin:5px auto 10px auto;
+	border: 1px solid #ddd;
+
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+
+}
+#friend_link h2 {
+	font-size: 14px;
+	font-weight:bold;
+	margin: 0 0 10px 0;
+	padding: 0 8px 0 25px;
+	line-height:28px;
+	color: #CC0000;
+	background: url(../themes/theme/images/title_bg.png) no-repeat 0 0;
+	border-bottom: 1px solid  #ccc;
+	font-size: 16px;
+	font-family:  "微软雅黑", "黑体"; 
+	letter-spacing: 1px;
+}
+#friend_link h2 span {
+	float:right;
+	text-align:right;
+	margin: 1px 0 0 10px;
+	+margin-top: -21px;	/* IE6 IE7 */
+	+margin-right: 5px;	/* IE6 IE7 */
+	height:13px;
+	font-size: 12px;
+	font-weight:normal;
+	cursor: pointer;
+}
+#friend_link a {
+	margin:5px;
+}
+
+/*============================  友情链接[.friend_link] 结束=======================================*/

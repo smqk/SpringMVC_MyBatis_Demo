@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.smqk.module.content.dao.IMenuDao">
+
+	<resultMap type="org.smqk.module.content.domain.Menu" id="BaseMenu">
+		<id property="id" column="menuId"/>
+		<result property="name" column="mName"/>
+		<result property="parentId" column="parentId"/>
+		<result property="url" column="url"/>
+		<result property="descript" column="descript"/>
+		<result property="orderValue" column="orderValue"/>
+	</resultMap>
+	
+
+	<!--  -->
+	<select id="findMenusByParentId" resultMap="BaseMenu" parameterType="Map" >
+		SELECT  menu.* 
+		FROM td_menu AS menu
+		<where>
+			<if test="parentId==null or parentId==''">
+				menu.parentId IS NULL
+			</if>
+			<if test="parentId !=null and parentId !=''">
+				AND menu.parentId=#{parentId}
+			</if>
+		</where>
+		ORDER BY menu.orderValue
+	</select>
+</mapper>

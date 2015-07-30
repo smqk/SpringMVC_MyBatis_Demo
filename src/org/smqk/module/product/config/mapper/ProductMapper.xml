@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.smqk.module.product.dao.IProductDao">
+	<resultMap type="org.smqk.module.product.domain.Product" id="BaseProduct">
+		<id property="productId" column="productId" jdbcType="VARCHAR" />
+		<result property="typeId" column="typeId" jdbcType="VARCHAR" />
+		<result property="pName" column="pName" jdbcType="VARCHAR" />
+		<result property="icon" column="icon" jdbcType="VARCHAR" />
+		<result property="description" column="description" jdbcType="VARCHAR" />
+		<result property="detail" column="detail" jdbcType="VARCHAR" />
+		<result property="status" column="status" jdbcType="VARCHAR" />
+		<result property="orderValue" column="orderValue" jdbcType="INTEGER" />
+		<result property="publishDate" column="publishDate" jdbcType="VARCHAR" />
+		<result property="publishTime" column="publishTime" jdbcType="VARCHAR" />
+	</resultMap>
+
+
+	<!-- 根据产品的分类ID获取产品分类下的产品 -->
+	<select id="findProductByTypeId" parameterType="String"	resultMap="BaseProduct">
+		SELECT *
+		FROM td_product
+		WHERE typeId=#{typeId,jdbcType=VARCHAR}
+		ORDER BY orderValue
+		DESC
+	</select>
+</mapper>
