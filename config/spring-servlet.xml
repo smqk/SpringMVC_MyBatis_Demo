@@ -14,39 +14,34 @@
 	<!-- 启动包扫描功能，以便注册带有@Controller、@Service、@repository、@Component等注解的类成为spring的bean -->
 	<context:component-scan base-package="org.smqk.module.*.controller" />
 
-	<!-- 配置HadnlerMapping、HandlerAdapter -->
+	<!-- 配置HadnlerMapping,表示将请求的URL和Bean名字映射 -->
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+	<!-- 配置HandlerAdapter,表示所有实现了org.springframework.web.servlet.mvc.Controller接口的Bean可以作为Spring Web MVC中的处理器 -->
 	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
-	
-	<!-- 对模型视图名称的解析，在/resources/pages目录下找对应的jsp文件 -->		
-<!-- 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
-<!-- 		<property name="prefix" value="/WEB-INF/jsp/" /> -->
-<!-- 		<property name="suffix" value=".jsp" /> -->
-<!-- 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" /> -->
-<!-- 	</bean> -->
-	
+
+	<!-- 配置多视图   -->
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-    <property name="mediaTypes">
-        <map>
-            <entry key="html" value="text/html"/>
-            <entry key="json" value="application/json"/>
-        </map>
-    </property>
-    <property name="viewResolvers">
-        <list>
-            <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
-            <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-                <property name="prefix" value="/WEB-INF/jsp/"/>
-                <property name="suffix" value=".jsp"/>
-            </bean>
-        </list>
-    </property>
-    <property name="defaultViews">
-        <list>
-            <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
-        </list>
-    </property>
-</bean>
+	    <property name="mediaTypes">
+	        <map>
+	            <entry key="html" value="text/html"/>
+	            <entry key="json" value="application/json"/>
+	        </map>
+	    </property>
+	    <property name="viewResolvers">
+	        <list>
+	            <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+	            <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	                <property name="prefix" value="/WEB-INF/jsp/"/>
+	                <property name="suffix" value=".jsp"/>
+	            </bean>
+	        </list>
+	    </property>
+	    <property name="defaultViews">
+	        <list>
+	            <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+	        </list>
+	    </property>
+	</bean>
 		
 	<!--放过/scripts下的静态文件 -->
 	<mvc:resources mapping="/resources/**" location="/resources/**" />
